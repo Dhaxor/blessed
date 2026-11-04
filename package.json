@@ -9,10 +9,10 @@
   "preferGlobal": false,
   "repository": {
     "type": "git",
-    "url": "git://github.com/chjj/blessed.git"
+    "url": "git://github.com/Dhaxor/blessed.git"
   },
-  "homepage": "https://github.com/chjj/blessed",
-  "bugs": { "url": "http://github.com/chjj/blessed/issues" },
+  "homepage": "https://github.com/Dhaxor/blessed",
+  "bugs": { "url": "http://github.com/Dhaxor/blessed/issues" },
   "keywords": ["curses", "tui", "tput", "terminfo", "termcap"],
   "tags": ["curses", "tui", "tput", "terminfo", "termcap"],
   "scripts": {
