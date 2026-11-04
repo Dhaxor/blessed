@@ -1,4 +1,16 @@
-# blessed
+# blessed (community revival)
+
+> [!NOTE]
+> This is a **community-maintained revival** of [chjj/blessed](https://github.com/chjj/blessed),
+> the classic terminal interface library for node.js. The original project has
+> been dormant since 2015, yet it is still downloaded **millions of times every
+> month**. This fork keeps it working on modern Node.js, fixes long-standing
+> bugs, and adds automated tests and CI.
+>
+> All credit for the library itself goes to
+> [Christopher Jeffrey (chjj)](https://github.com/chjj) and contributors.
+> Licensed under MIT, as always. See [`CHANGELOG.md`](CHANGELOG.md) for revival
+> changes.
 
 A curses-like library with a high level terminal interface API for node.js.
 

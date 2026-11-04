@@ -1,3 +1,32 @@
+# v0.2.0 (revival) - community maintenance
+
+First community release of the revival fork. Fixes long-standing bugs, adds an
+automated test suite, and CI on modern Node.js. No API changes.
+
+- __Fixed memory leak on `screen.destroy()`__: the screen-level `keypress` and
+  `mouse` relay handlers were attached to the program with anonymous closures
+  and never removed. A program shared across screens (common with dashboards)
+  accumulated references to destroyed screens. Handlers are now tracked and
+  removed on destroy.
+- __Fixed `emitDescendants()` / `emitAncestors()`__: both used
+  `Array.prototype.slice(arguments)` instead of `Array.prototype.slice.call(arguments)`,
+  so the arguments array was always empty — these methods never delivered the
+  event name or payload since they were written in 2013.
+- __Made `screen.destroy()` idempotent__: calling it twice no longer throws or
+  double-decrements program reference counts; `destroyed` is set reliably.
+- __Replaced deprecated `new Buffer()`__ with `Buffer.alloc()` in the GPM
+  client (runtime deprecation warning on Node ≥ 10).
+- __Replaced deprecated `__proto__` mutation__ with `Object.setPrototypeOf`.
+- __Added `listenerCount()`__ to blessed's internal EventEmitter for parity
+  with node's.
+- __Added an automated test suite__ (`node --test`, zero dependencies): module
+  loading, headless screen rendering via piped streams, input parsing (keys,
+  escape sequences, ctrl chords, UTF-8), element tree invariants, event
+  bubbling, and destroy/leak regressions.
+- __Added CI (GitHub Actions)__ testing Node 18/20/22/24 on Linux, Windows,
+  and macOS.
+- __`engines` bumped to `>= 12`__ and added `npm test` script.
+
 # Blessed v0.1.0 - new terminal goodies for node.js
 
 ![blessed](https://raw.githubusercontent.com/chjj/blessed/master/img/v0.1.0-3.gif)
