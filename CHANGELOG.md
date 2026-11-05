@@ -26,6 +26,10 @@ automated test suite, and CI on modern Node.js. No API changes.
 - __Added CI (GitHub Actions)__ testing Node 18/20/22/24 on Linux, Windows,
   and macOS.
 - __`engines` bumped to `>= 12`__ and added `npm test` script.
+- __Published to npm as `blessed-revived`__ (the original `blessed` package
+  name still belongs to the original author). Added a `files` allowlist so
+  only runtime code (`lib/`, `bin/`, `browser/`, `usr/` terminfo fallbacks,
+  `vendor/`) ships in the tarball — not tests, examples, or images.
 
 # Blessed v0.1.0 - new terminal goodies for node.js
 

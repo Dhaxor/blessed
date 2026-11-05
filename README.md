@@ -11,6 +11,10 @@
 > [Christopher Jeffrey (chjj)](https://github.com/chjj) and contributors.
 > Licensed under MIT, as always. See [`CHANGELOG.md`](CHANGELOG.md) for revival
 > changes.
+>
+> **Install from npm:** `npm install blessed-revived`
+> (published under a new name because the original `blessed` package still
+> belongs to the original author).
 
 A curses-like library with a high level terminal interface API for node.js.
 

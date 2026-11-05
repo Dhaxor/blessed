@@ -1,6 +1,6 @@
 {
-  "name": "blessed",
-  "description": "A high-level terminal interface library for node.js.",
+  "name": "blessed-revived",
+  "description": "A high-level terminal interface library for node.js. Community revival of the classic 'blessed' package (dormant since 2015) with fixes for modern Node.js, an automated test suite, and CI.",
   "author": "Christopher Jeffrey",
   "version": "0.2.0",
   "license": "MIT",
@@ -15,6 +15,17 @@
   "bugs": { "url": "http://github.com/Dhaxor/blessed/issues" },
   "keywords": ["curses", "tui", "tput", "terminfo", "termcap"],
   "tags": ["curses", "tui", "tput", "terminfo", "termcap"],
+  "files": [
+    "index.js",
+    "lib/",
+    "bin/",
+    "browser/",
+    "usr/",
+    "vendor/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "test": "node --test test/smoke.test.js test/node-tree.test.js test/keys.test.js"
   },
